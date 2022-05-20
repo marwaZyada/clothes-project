@@ -74,6 +74,10 @@ li a:hover:after {
     position: relative;
 }
 
+.lock a i {
+    color: #000;
+}
+
 .lock:before {
     content: "0";
     font-size: 10px;
