@@ -13,11 +13,11 @@
 
 <body>
     <!-- start header -->
-    <header>
-        <!-- start navbar -->
-        <div class="header-nav  position-absolute start-0 top-0 w-100">
+    <header class="position-absolute w-100 top-0 start-0">
+
+        <div class="header-nav  ">
             <div class="container">
-                <nav class="navbar navbar-expand-lg p-3">
+                <nav class="navbar navbar-expand-lg ">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,10 +40,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">contact</a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="#"><i class="fa-solid fa-lock"></i></a>
-                                </li>
                             </ul>
+                            <div class="lock ">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-lock"></i></a>
+                            </div>
+
 
 
                         </div>
@@ -51,40 +52,39 @@
                 </nav>
             </div>
         </div>
-        <!-- end navbar -->
-        <!-- start deals -->
-        <div class="deals d-flex align-items-end position-relative text-capitalize ">
-            <div class=" container ">
-                <div class=" deals-content  w-100 d-flex justify-content-between align-items-center  px-3">
+    </header>
+    <!-- end header -->
 
-                    <div class="deals-inf ">
-                        <h5>trade-in-offer</h5>
-                        <h1>super value deals</h1>
-                        <h2 class="fs-1 color-zitony ">on all products</h2>
-                        <p>save more with coupons & up to 70% off!</p>
+    <!-- start deals -->
+    <div class="landing-background   text-capitalize ">
+        <div class="container">
+            <div class=" deals-content    d-flex align-items-center  ">
 
-                        <div class="picture position-relative  ">
+                <div class="deals-inf ">
+                    <h5>trade-in-offer</h5>
+                    <h1>super value deals</h1>
+                    <h2 class="fs-1 color-zitony ">on all products</h2>
+                    <p>save more with coupons & up to 70% off!</p>
 
-                            <p class="info position-absolute color-zitony ">shop now</p>
-                            <img src="images/button.png " alt=" " width="100% " height="100% ">
+                    <div class="picture position-relative  ">
 
-                        </div>
-                    </div>
+                        <p class="info position-absolute color-zitony ">shop now</p>
+                        <img src="images/button.png " alt=" " width="100% " height="100% ">
 
 
-                    <div class="deals-image ">
-                        <img src="images/hero4.jpeg " alt=" " width="100% ">
                     </div>
 
                 </div>
+
             </div>
         </div>
-        <!-- end deals -->
+    </div>
+    <!-- end deals -->
 
 
-    </header>
 
-    <!-- end header -->
+
+
 
     <!-- start offers -->
     <div class="offers pt-5 text-capitalize">
@@ -303,12 +303,14 @@
 
     <!-- end products -->
     <!-- start accessories -->
-    <div class="accessories text-capitalize text-light">
+    <div class="accessories text-capitalize text-light py-5 text-center">
         <div class="container">
-            <div class="accessories-info d-flex justify-content-between align-items-center flex-column ">
-                <h4>repair services</h4>
-                <h2>up to <span class="text-danger">70% off</span> -all t-shirts & accessories</h2>
-                <button type="button" class="btn btn-light btn-lg text-capitalize "><a href=""class="text-dark fw-bold px-3">explore more</a> </button>
+            <div class="accessories-content ">
+                <div class="accessories-info  ">
+                    <h4>repair services</h4>
+                    <h2>up to <span class="text-danger">70% off</span> -all t-shirts & accessories</h2>
+                    <button type="button" class="btn btn-light btn-lg text-capitalize "><a href=""class="text-dark fw-bold px-3">explore more</a> </button>
+                </div>
             </div>
 
         </div>
@@ -530,7 +532,7 @@
     <!-- start signup -->
     <div class="signup py-5 text-capitalize ">
         <div class="container">
-            <div class="row signup-content d-flex justify-content-between align-items-center">
+            <div class="row signup-content  justify-content-between align-items-center">
                 <div class="col-sm-12 col-lg-6 signup-info">
                     <h2 class="text-light">sign up for new letters</h2>
                     <p class="color-lightblue">get e-mail update about our latest shop and <span class="text-warning">spesail offers.</span></p>
