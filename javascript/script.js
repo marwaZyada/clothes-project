@@ -15,8 +15,13 @@ close.onclick = () => { menu.classList.remove("show") };
 darkMode.onclick = () => {
     dropMenu.style.color = "white";
     darkMode.style.backgroundColor = "white";
-    divMode.style.cssText = "margin-left:auto;"
+
     image1.src = "";
+    divMode.style.marginRight = "auto";
+
+
+
+
 
     document.body.classList.add('darkWindow');
 

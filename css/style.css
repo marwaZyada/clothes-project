@@ -35,17 +35,9 @@
         align-items: flex-end;
         padding: 20px;
         background-color: var(--zitony);
-        display: none;
-        animation: menu-animate .5s ease forwards;
-    }
-    
-    @keyframes menu-animate {
-        from {
-            width: 0;
-        }
-        to {
-            width: 150px;
-        }
+        visibility: hidden;
+        opacity: 0;
+        transition: all .8s;
     }
     
     .menue a {
@@ -61,7 +53,18 @@
     }
     
     .show {
-        display: flex;
+        visibility: visible;
+        opacity: 1;
+        animation: menu-animate .5s ease;
+    }
+    
+    @keyframes menu-animate {
+        from {
+            width: 0;
+        }
+        to {
+            width: 150px;
+        }
     }
     
     .mode {
