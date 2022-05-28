@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clothes</title>
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--start animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--end animation library -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,9 +28,18 @@
                 <nav class="navbar navbar-expand-lg ">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+                        <div class="mode d-flex " id="div-mode">
+                            <a id="dark-mode" href="#"><span  class="material-symbols-outlined text-dark">
+                            light_mode
+                            </span></a>
+                            <span id="light-mode" class="material-symbols-outlined ">
+                                star
+                                </span>
+                        </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fa-solid fa-bars"></i>
+                            <i id="drop-menu" class="fa-solid fa-bars"></i>
                       </button>
+
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto text-capitalize fs-5 ">
                                 <li class="nav-item">
@@ -40,14 +57,23 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">contact</a>
                                 </li>
+
                             </ul>
-                            <div class="lock ">
-                                <a href="#"><i class="fa-solid fa-lock"></i></a>
-                            </div>
-
-
-
                         </div>
+                        <div class="lock ">
+                            <a href="#"><i class="fa-solid fa-lock " id="display-lock"></i></a>
+
+                            <div class="menue">
+                                <span class="material-symbols-outlined">
+                                    close
+                                    </span>
+                                <a href="">Products</a>
+                                <a href="">Services</a>
+                                <a href="">Sign-up</a>
+                            </div>
+                        </div>
+
+
                     </div>
                 </nav>
             </div>
@@ -56,20 +82,21 @@
     <!-- end header -->
 
     <!-- start deals -->
-    <div class="landing-background   text-capitalize ">
+    <div class="landing-background   text-capitalize " id="back-image">
         <div class="container">
             <div class=" deals-content    d-flex align-items-center  ">
 
                 <div class="deals-inf ">
-                    <h5>trade-in-offer</h5>
+                    <h5 class="animate__animated animate__shakeX animate__flip">trade-in-offer</h5>
                     <h1>super value deals</h1>
                     <h2 class="fs-1 color-zitony ">on all products</h2>
                     <p>save more with coupons & up to 70% off!</p>
 
+
                     <div class="picture position-relative  ">
 
-                        <p class="info position-absolute color-zitony ">shop now</p>
-                        <img src="images/button.png " alt=" " width="100% " height="100% ">
+                        <p class="info position-absolute color-zitony "> shop now </p>
+                        <img src=" images/button.png " alt=" " width="100% " height="100% ">
 
 
                     </div>
@@ -87,66 +114,66 @@
 
 
     <!-- start offers -->
-    <div class="offers pt-5 text-capitalize">
-        <div class="container">
+    <div class="offers pt-5 text-capitalize ">
+        <div class="container ">
             <div class="row d-flex justify-content-between align-items-center text-center ">
 
-                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 ">
-                    <div class="offers-content">
+                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2  wow animate__animated animate__fadeInLeft fw-bold">
+                    <div class="offers-content ">
                         <div class="free-shipping border p-3 mb-4 ">
-                            <img src="images/f1.png" alt="">
-                            <div class="shipping-button text-center mt-2">
-                                <a class="color-zitony" href="">free shipping</a>
+                            <img src="images/f1.png " alt=" ">
+                            <div class="shipping-button text-center mt-2 ">
+                                <a class="color-zitony " href=" ">free shipping</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 ">
-                    <div class="offers-content">
+                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 wow animate__animated animate__fadeInDown fw-bold" data-wow-delay="2s">
+                    <div class="offers-content ">
                         <div class="free-shipping border p-3 mb-4 ">
-                            <img src="images/f2.png" alt="">
-                            <div class="order-button text-center mt-2">
-                                <a class="color-zitony" href="">online order</a>
+                            <img src="images/f2.png " alt=" ">
+                            <div class="order-button text-center mt-2 ">
+                                <a class="color-zitony " href=" ">online order</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 ">
-                    <div class="offers-content">
+                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 wow animate__animated animate__fadeInRight">
+                    <div class="offers-content ">
                         <div class="free-shipping border p-3 mb-4 ">
-                            <img src="images/f3.png" alt="">
-                            <div class="money-button text-center mt-2">
-                                <a class="color-zitony" href="">save money</a>
+                            <img src="images/f3.png " alt=" ">
+                            <div class="money-button text-center mt-2 ">
+                                <a class="color-zitony " href=" ">save money</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 ">
-                    <div class="offers-content">
+                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 wow animate__animated animate__fadeInLeft fw-bold">
+                    <div class="offers-content ">
                         <div class="free-shipping border p-3 mb-4 ">
-                            <img src="images/f4.png" alt="">
-                            <div class="promotions-button text-center mt-2">
-                                <a class="color-zitony" href="">promotions</a>
+                            <img src="images/f4.png " alt=" ">
+                            <div class="promotions-button text-center mt-2 ">
+                                <a class="color-zitony " href=" ">promotions</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 ">
-                    <div class="offers-content">
+                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 wow animate__animated animate__fadeInDown fw-bold" data-wow-duration="2s">
+                    <div class="offers-content ">
                         <div class="free-shipping border p-3 mb-4 ">
-                            <img src="images/f5.png" alt="">
-                            <div class="sell-button text-center mt-2">
-                                <a class="color-zitony" href="">happy sell</a>
+                            <img src="images/f5.png " alt=" ">
+                            <div class="sell-button text-center mt-2 ">
+                                <a class="color-zitony " href=" ">happy sell</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 ">
-                    <div class="offers-content">
+                <div class="col-xs-7 col-sm-5 col-md-4 col-lg-2 wow animate__animated animate__fadeInRight">
+                    <div class="offers-content ">
                         <div class="free-shipping border p-3 mb-4 ">
-                            <img src="images/f6.png" alt="">
-                            <div class="support-button text-center mt-2">
-                                <a class="color-zitony" href="">f24/7 support</a>
+                            <img src="images/f6.png " alt=" ">
+                            <div class="support-button text-center mt-2 ">
+                                <a class="color-zitony " href=" ">f24/7 support</a>
                             </div>
                         </div>
                     </div>
@@ -160,136 +187,136 @@
     <!-- end offers -->
     <!-- start products -->
     <div class="products py-5 ">
-        <div class="container">
+        <div class="container ">
             <div class="products-content text-center ">
-                <h2 class="fw-bold">featured products</h2>
+                <h2 class="wow animate__animated animate__fadeInDown fw-bold">featured products</h2>
                 <p>summer collenction new modern design</p>
             </div>
 
-            <div class="row products-images py-5 d-flex justify-content-between align-items-center">
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+            <div class="row products-images py-5 d-flex justify-content-between align-items-center ">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f1.jpg" alt="">
+                        <img src="images/f1.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f2.jpg" alt="">
+                        <img src="images/f2.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f3.jpg" alt="">
+                        <img src="images/f3.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f4.jpg" alt="">
+                        <img src="images/f4.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f5.jpg" alt="">
+                        <img src="images/f5.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f6.jpg" alt="">
+                        <img src="images/f6.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f7.jpg" alt="">
+                        <img src="images/f7.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">pants</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">pants</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="products-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="products-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/f8.jpg" alt="">
+                        <img src="images/f8.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="products-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="products-salary ">29.99</p>
-                            <div class="products-cart  d-flex justify-content-center align-items-center">
+                            <div class="products-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
@@ -303,13 +330,13 @@
 
     <!-- end products -->
     <!-- start accessories -->
-    <div class="accessories text-capitalize text-light py-5 text-center">
-        <div class="container">
+    <div class="accessories text-capitalize text-light py-5 text-center ">
+        <div class="container ">
             <div class="accessories-content ">
-                <div class="accessories-info  ">
+                <div class="accessories-info ">
                     <h4>repair services</h4>
-                    <h2>up to <span class="text-danger">70% off</span> -all t-shirts & accessories</h2>
-                    <button type="button" class="btn btn-light btn-lg text-capitalize "><a href=""class="text-dark fw-bold px-3">explore more</a> </button>
+                    <h2>up to <span class="text-danger ">70% off</span> -all t-shirts & accessories</h2>
+                    <button type="button " class="btn btn-light btn-lg text-capitalize "><a href=" "class="text-dark fw-bold px-3 ">explore more</a> </button>
                 </div>
             </div>
 
@@ -318,137 +345,137 @@
     <!-- end accessories -->
 
     <!-- start arrivals -->
-    <div class="arrivals py-5 text-capitalize">
-        <div class="container">
+    <div class="arrivals py-5 text-capitalize ">
+        <div class="container ">
             <div class="arrivals-content text-center ">
-                <h2 class="fw-bold">new arrivals</h2>
+                <h2 class="fw-bold ">new arrivals</h2>
                 <p>summer collenction new modern design</p>
             </div>
 
-            <div class="row arrivals-images py-5 d-flex justify-content-between align-items-center">
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+            <div class="row arrivals-images py-5 d-flex justify-content-between align-items-center ">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n1.jpg" alt="">
+                        <img src="images/n1.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n2.jpg" alt="">
+                        <img src="images/n2.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n3.jpg" alt="">
+                        <img src="images/n3.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n4.jpg" alt="">
+                        <img src="images/n4.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n5.jpg" alt="">
+                        <img src="images/n5.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n6.jpg" alt="">
+                        <img src="images/n6.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n7.jpg" alt="">
+                        <img src="images/n7.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5">
-                    <div class="arrivals-info fs-4 p-2 border mb-4">
+                <div class="col-lg-3 col-md-5 ">
+                    <div class="arrivals-info fs-4 p-2 border mb-4 ">
 
-                        <img src="images/n8.jpg" alt="">
+                        <img src="images/n8.jpg " alt=" ">
 
-                        <p class="color-lightblue">addas</p>
-                        <h6 class="text-capitalize">shirt</h6>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center">
+                        <p class="color-lightblue ">addas</p>
+                        <h6 class="text-capitalize ">shirt</h6>
+                        <i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i>
+                        <div class="arrivals-salary-cart color-zitony d-flex justify-content-between align-items-center ">
                             <p class="arrivals-salary ">29.99</p>
-                            <div class="arrivals-cart  d-flex justify-content-center align-items-center">
+                            <div class="arrivals-cart d-flex justify-content-center align-items-center ">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </div>
                         </div>
@@ -464,60 +491,60 @@
 
     <!-- end arrivals -->
     <!-- start seasons-->
-    <div class="seasons py-5 text-light">
-        <div class="container">
+    <div class="seasons py-5 text-light ">
+        <div class="container ">
             <div class="row season-images d-flex justify-content-between align-items-center ">
-                <div class="col-sm-12 col-lg-6 mb-4">
-                    <div class="seasons-content position-relative mb-2">
-                        <img src="images/b17.jpg" width="100%" alt="">
-                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center  px-4 h-100">
+                <div class="col-sm-12 col-lg-6 mb-4 ">
+                    <div class="seasons-content position-relative mb-2 ">
+                        <img src="images/b17.jpg " width="100% " alt=" ">
+                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center px-4 h-100 ">
                             <p>crazy deals</p>
                             <h2>buy 1 get 1 free</h2>
                             <p>the best classic dress is an sale at cora</p>
-                            <button type="button" class="btn btn-outline-light  text-capitalize w-50"><a href=""class="text-light fw-bold ">learn more</a> </button>
+                            <button type="button " class="btn btn-outline-light text-capitalize w-50 "><a href=" "class="text-light fw-bold ">learn more</a> </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-6 mb-4">
-                    <div class="seasons-content position-relative mb-2">
-                        <img src="images/b10.jpg" width="100%" alt="">
-                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center  px-4 h-100 ">
+                <div class="col-sm-12 col-lg-6 mb-4 ">
+                    <div class="seasons-content position-relative mb-2 ">
+                        <img src="images/b10.jpg " width="100% " alt=" ">
+                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center px-4 h-100 ">
                             <p>spring/summer</p>
                             <h2>upcomming season</h2>
                             <p>the best classic dress is an sale at cora</p>
-                            <button type="button" class="btn btn-outline-light  text-capitalize w-50"><a href=""class="text-light fw-bold ">collection</a> </button>
+                            <button type="button " class="btn btn-outline-light text-capitalize w-50 "><a href=" "class="text-light fw-bold ">collection</a> </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-6 mb-4">
-                    <div class="seasons-content position-relative   mb-2" style="height: 228px;">
-                        <img src="images/b7.jpg" alt="">
-                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center  px-4 h-100 ">
+                <div class="col-sm-12 col-lg-6 mb-4 ">
+                    <div class="seasons-content position-relative mb-2 " style="height: 228px; ">
+                        <img src="images/b7.jpg " alt=" ">
+                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center px-4 h-100 ">
 
                             <h2>seasonal sale</h2>
-                            <h3 class="text-danger">winter collection - 50% off</h3>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-6 mb-4">
-                    <div class="seasons-content position-relative   mb-2" style="height: 228px;">
-                        <img src="images/b4.jpg" alt="">
-                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center  px-4 h-100 ">
-
-                            <h2>seasonal sale</h2>
-                            <h3 class="text-danger">winter collection - 50% off</h3>
+                            <h3 class="text-danger ">winter collection - 50% off</h3>
 
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-6 mb-4">
-                    <div class="seasons-content position-relative   mb-2" style="height: 228px;">
-                        <img src="images/b18.jpg" alt="">
-                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center  px-4 h-100 ">
+                <div class="col-sm-12 col-lg-6 mb-4 ">
+                    <div class="seasons-content position-relative mb-2 " style="height: 228px; ">
+                        <img src="images/b4.jpg " alt=" ">
+                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center px-4 h-100 ">
 
                             <h2>seasonal sale</h2>
-                            <h3 class="text-danger">winter collection - 50% off</h3>
+                            <h3 class="text-danger ">winter collection - 50% off</h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 mb-4 ">
+                    <div class="seasons-content position-relative mb-2 " style="height: 228px; ">
+                        <img src="images/b18.jpg " alt=" ">
+                        <div class="seasons-info position-absolute top-0 start-0 d-flex flex-column justify-content-center px-4 h-100 ">
+
+                            <h2>seasonal sale</h2>
+                            <h3 class="text-danger ">winter collection - 50% off</h3>
 
                         </div>
                     </div>
@@ -531,13 +558,13 @@
     <!-- end seasons -->
     <!-- start signup -->
     <div class="signup py-5 text-capitalize ">
-        <div class="container">
-            <div class="row signup-content  justify-content-between align-items-center">
-                <div class="col-sm-12 col-lg-6 signup-info">
-                    <h2 class="text-light">sign up for new letters</h2>
-                    <p class="color-lightblue">get e-mail update about our latest shop and <span class="text-warning">spesail offers.</span></p>
+        <div class="container ">
+            <div class="row signup-content justify-content-between align-items-center ">
+                <div class="col-sm-12 col-lg-6 signup-info ">
+                    <h2 class="text-light ">sign up for new letters</h2>
+                    <p class="color-lightblue ">get e-mail update about our latest shop and <span class="text-warning ">spesail offers.</span></p>
                 </div>
-                <div class="col-sm-12 col-lg-6 signup-input  d-flex justify-content-center">
+                <div class="col-sm-12 col-lg-6 signup-input d-flex justify-content-center ">
                     <input type=" text " placeholder="Your email address ">
                     <button type="button " class="btn btn-success ">sign up</button>
                 </div>
@@ -548,18 +575,18 @@
     <!-- end signup -->
     <!-- start care -->
     <div class="care py-5 text-capitalize ">
-        <div class="container">
-            <div class="care-content d-flex justify-content-between align-items-center flex-wrap">
-                <div class="contact">
-                    <img src="images/logo.png" alt="">
+        <div class="container ">
+            <div class="care-content d-flex justify-content-between align-items-center flex-wrap ">
+                <div class="contact ">
+                    <img src="images/logo.png " alt=" ">
 
-                    <h4 class="mt-4">contact</h4>
+                    <h4 class="mt-4 ">contact</h4>
                     <p>address:</p>
                     <p>phone:</p>
                     <p>hours:</p>
                     <h4>follow us</h4>
                 </div>
-                <div class="about-us">
+                <div class="about-us ">
                     <h4>about</h4>
                     <p>about us</p>
                     <p>delivery information</p>
@@ -567,7 +594,7 @@
                     <p>terms & conditions</p>
                     <p>contact us</p>
                 </div>
-                <div class="account">
+                <div class="account ">
                     <h4>my account</h4>
                     <p>sign in</p>
                     <p>view vart</p>
@@ -576,13 +603,13 @@
                     <p>help</p>
                 </div>
 
-                <div class="app">
+                <div class="app ">
                     <h4>install app</h4>
                     <p>from app store or google play</p>
-                    <img class="app-border " src="images/app.jpg" alt="">
-                    <img class="app-border " src="images/play.jpg" alt="">
-                    <p><span class="text-uppercase">se</span>cured payment gateways</p>
-                    <img src="images/pay.png" alt="">
+                    <img class="app-border " src="images/app.jpg " alt=" ">
+                    <img class="app-border " src="images/play.jpg " alt=" ">
+                    <p><span class="text-uppercase ">se</span>cured payment gateways</p>
+                    <img src="images/pay.png " alt=" ">
                 </div>
             </div>
         </div>
@@ -590,8 +617,11 @@
     <!-- end care -->
 
 
+
     <script src="javascript/popper.min.js "></script>
     <script src="javascript/bootstrap.min.js "></script>
+    <script src="/javascript/wow.min.js "></script>
+    <script src="javascript/script.js "></script>
 </body>
 
 </html>

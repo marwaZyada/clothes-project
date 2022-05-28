@@ -1,374 +1,417 @@
-* {
-    box-sizing: border-box;
-}
-
- :root {
-    --pink: #fcd2f4;
-    --lightblue: #e3eaf1;
-    --lightgreen: #c5e0b6;
-    --lightorange: #fae1be;
-    --lightpurple: #fcd4fa;
-    --orange: #fae364;
-    --lightnavy: #a7b5f2;
-    --zitony: #149182;
-    --lightzitony: #94d1ca;
-    --gray: #f0f2f2;
-    --red: #f54e5f;
-    --navy: #23094a;
-}
-
-a {
-    text-decoration: none;
-}
-
-.color-lightblue {
-    color: var(--lightblue);
-}
-
-.color-zitony {
-    color: var(--zitony);
-}
-
-
-/* start header */
-
-
-/* start navbar */
-
-header {
-    box-shadow: -1px 0 6px rgb(0 0 0 / 70%);
-    background-color: #e3eaf2;
-    z-index: 999;
-}
-
-.navbar-nav li a {
-    color: black;
-}
-
-.nav-item {
-    position: relative;
-    color: var(--zitony);
-}
-
-li a:hover,
-li a:focus {
-    color: var(--zitony)!important;
-}
-
-li a:hover:after {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 2px;
-    left: 10px;
-    bottom: 7px;
-    background-color: var(--zitony);
-}
-
-.navbar-toggler {
-    box-shadow: none;
-    border: 2px solid black;
-}
-
-.lock {
-    position: relative;
-}
-
-.lock a i {
-    color: #000;
-}
-
-.lock:before {
-    content: "0";
-    font-size: 10px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 19px;
-    height: 23px;
-    left: 29px;
-    top: -11px;
-    border-radius: 4px;
-    background-color: var(--zitony);
-}
-
-
-/* end navbar */
-
-
-/* end header */
-
-
-/* start deals */
-
-.landing-background {
-    background-image: url(../images/hero4.jpeg);
-    background-color: #e3eaf2;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 50px;
-    min-height: 100vh;
-}
-
-.deals-content {
-    height: calc(100vh);
-}
-
-.picture {
-    width: 50%;
-    height: 40px;
-}
-
-.picture img {
-    width: 100%;
-    height: 100%;
-}
-
-.picture .info {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.deals .deals-image img {
-    width: 100%;
-    height: 100%;
-}
-
-@media(max-width:992px) {
-    li a:hover:after {
+    * {
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --pink: #fcd2f4;
+        --lightblue: #e3eaf1;
+        --lightgreen: #c5e0b6;
+        --lightorange: #fae1be;
+        --lightpurple: #fcd4fa;
+        --orange: #fae364;
+        --lightnavy: #a7b5f2;
+        --zitony: #149182;
+        --lightzitony: #94d1ca;
+        --gray: #f0f2f2;
+        --red: #f54e5f;
+        --navy: #23094a;
+        --body: #ffffff;
+        --black: black;
+        --background-header: #e3eaf2;
+    }
+    
+    body {
+        background-color: var(--body);
+    }
+    
+    .menue {
+        position: absolute;
+        right: -75px;
+        top: 45px;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 150px;
+        align-items: flex-end;
+        padding: 20px;
+        background-color: var(--zitony);
         display: none;
+        animation: menu-animate .5s ease forwards;
     }
-}
-
-@media(max-width:576px) {
-    .landing-background {
-        background-image: none;
+    
+    @keyframes menu-animate {
+        from {
+            width: 0;
+        }
+        to {
+            width: 150px;
+        }
     }
-    .deals-content {
-        text-align: center;
+    
+    .menue a {
+        color: var(--black);
+    }
+    
+    .menue span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--black);
+        cursor: pointer;
+    }
+    
+    .show {
+        display: flex;
+    }
+    
+    .mode {
+        display: none!important;
+    }
+    
+    #light-mode:hover {
+        cursor: pointer;
+    }
+    
+    .darkWindow {
+        --background-header: black;
+        --body: black;
+        --black: white;
+        color: white!important;
+        background-image: none!important;
+        background-color: black;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .color-lightblue {
+        color: var(--lightblue);
+    }
+    
+    .color-zitony {
+        color: var(--zitony);
+    }
+    /* start header */
+    /* start navbar */
+    
+    header {
+        box-shadow: -1px 0 6px rgb(0 0 0 / 70%);
+        background-color: var(--background-header);
+        z-index: 999;
+    }
+    
+    .navbar-nav li a {
+        color: var(--black);
+    }
+    
+    .nav-item {
+        position: relative;
+        color: var(--zitony);
+    }
+    
+    li a:hover,
+    li a:focus {
+        color: var(--zitony)!important;
+    }
+    
+    li a:hover:after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        left: 10px;
+        bottom: 7px;
+        background-color: var(--zitony);
+    }
+    
+    .navbar-toggler {
+        box-shadow: none;
+        border: 2px solid black;
+    }
+    
+    .nav-item span {
+        display: block;
+        padding: 0.2rem 0;
+    }
+    
+    .lock {
+        position: relative;
+    }
+    
+    .lock a i {
+        color: var(--black);
+    }
+    
+    .lock:before {
+        content: "0";
+        font-size: 10px;
+        color: white;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 19px;
+        height: 23px;
+        left: 29px;
+        top: -11px;
+        border-radius: 4px;
+        background-color: var(--zitony);
     }
+    /* end navbar */
+    /* end header */
+    /* start deals */
+    
+    .landing-background {
+        background-image: url(../images/hero4.jpeg);
+        background-color: var(--background-header);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 50px;
+        min-height: 100vh;
+    }
+    
+    .deals-content {
+        height: calc(100vh);
+    }
+    
     .picture {
-        margin: auto;
+        width: 50%;
+        height: 40px;
     }
-}
-
-
-/* end deals */
-
-
-/* start offers  */
-
-.col-lg-2 {
-    width: 250px;
-}
-
-.offers .offers-content {
-    box-shadow: 5px 5px 10px var(--lightblue);
-}
-
-.offers>img {
-    width: 100%;
-}
-
-.offers .shipping-button,
-.offers .order-button,
-.offers .money-button,
-.offers .promotions-button,
-.offers .sell-button,
-.offers .support-button {
-    height: 28px;
-    border-radius: 4px;
-}
-
-.offers .shipping-button {
-    background-color: var(--pink);
-}
-
-.offers .order-button {
-    background-color: var(--lightgreen);
-}
-
-.offers .money-button {
-    background-color: var(--lightblue);
-}
-
-.offers .promotions-button {
-    background-color: var(--lightnavy);
-}
-
-.offers .sell-button {
-    background-color: var(--lightpurple);
-}
-
-.offers .support-button {
-    background-color: var(--lightorange);
-}
-
-@media(max-width:576px) {
-    .offers .row {
-        flex-direction: column;
+    
+    .picture img {
+        width: 100%;
+        height: 100%;
     }
-}
-
-
-/* end offers  */
-
-
-/* start products */
-
-.products-info,
-.arrivals-info {
-    box-shadow: 5px 5px 10px var(--lightblue);
-}
-
-.products-info,
-.products-info img {
-    border-radius: 10px;
-}
-
-.products-info img {
-    width: 100%;
-}
-
-.products-info i {
-    color: var(--orange);
-}
-
-.products-cart {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--lightgreen);
-}
-
-.products-cart i {
-    color: var(--zitony);
-}
-
-
-/* end products */
-
-
-/* start accessories */
-
-.accessories {
-    background: url(../images/b2.jpg) center/cover;
-}
-
-
-/* end accessories */
-
-
-/* start arrivals */
-
-.arrivals-info,
-.arrivals-info img {
-    border-radius: 10px;
-}
-
-.arrivals-info img {
-    width: 100%;
-}
-
-.arrivals-info i {
-    color: var(--orange);
-}
-
-.arrivals-cart {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--lightgreen);
-}
-
-.arrivals-cart i {
-    color: var(--zitony);
-}
-
-
-/* end arrivals */
-
-
-/* start seasons */
-
-.seasons .seasons-content {
-    height: 450px;
-}
-
-.seasons .btn {
-    border-radius: 0;
-}
-
-.seasons .btn-outline-light:hover {
-    color: #000;
-    background-color: transparent;
-}
-
-.seasons img {
-    width: 100%;
-    height: 100%;
-}
-
-
-/* end seasons */
-
-
-/* start signup */
-
-.signup {
-    background-image: url(../images/b1.jpg);
-    background-size: cover;
-}
-
-input {
-    width: 330px;
-    padding: 0.7rem 0.75rem;
-    border-radius: 5px 0 0 5px;
-    border: none;
-    background-color: white;
-}
-
-.signup .btn {
-    border-radius: 0 5px 5px 0;
-    padding: 0.8rem 2rem;
-}
-
-@media (max-width:992px) {
-    .signup-content {
-        text-align: center;
-        flex-direction: column;
-        transform: translateY(15%);
+    
+    .picture .info {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
-}
-
-@media (max-width:576px) {
-    .signup-input input {
-        width: 230px;
-        padding: 8px 0px 8px 5px;
+    
+    .deals .deals-image img {
+        width: 100%;
+        height: 100%;
     }
-    .signup-input .btn {
-        padding: 8px 5px;
+    
+    @media(max-width:992px) {
+        li a:hover:after {
+            display: none;
+        }
+        .lock {
+            display: none;
+        }
     }
-}
-
-
-/* end signup */
-
-
-/* start care */
-
-.care {
-    font-size: 14px;
-}
-
-.app .app-border {
-    border: 1px solid var(--zitony);
-    border-radius: 4px;
-}
-
-
-/* end care */
+    
+    @media(max-width:576px) {
+        .landing-background {
+            background-image: none;
+        }
+        .deals-content {
+            text-align: center;
+            justify-content: center;
+        }
+        .picture {
+            margin: auto;
+        }
+        .mode {
+            display: flex!important;
+        }
+        .lock {
+            display: block;
+            margin-right: 22px;
+            margin-left: 10px;
+        }
+        .menue {
+            right: -45px;
+        }
+    }
+    /* end deals */
+    /* start offers  */
+    
+    .col-lg-2 {
+        width: 250px;
+    }
+    
+    .offers .offers-content {
+        box-shadow: 5px 5px 10px var(--lightblue);
+    }
+    
+    .offers>img {
+        width: 100%;
+    }
+    
+    .offers .shipping-button,
+    .offers .order-button,
+    .offers .money-button,
+    .offers .promotions-button,
+    .offers .sell-button,
+    .offers .support-button {
+        height: 28px;
+        border-radius: 4px;
+    }
+    
+    .offers .shipping-button {
+        background-color: var(--pink);
+    }
+    
+    .offers .order-button {
+        background-color: var(--lightgreen);
+    }
+    
+    .offers .money-button {
+        background-color: var(--lightblue);
+    }
+    
+    .offers .promotions-button {
+        background-color: var(--lightnavy);
+    }
+    
+    .offers .sell-button {
+        background-color: var(--lightpurple);
+    }
+    
+    .offers .support-button {
+        background-color: var(--lightorange);
+    }
+    
+    @media(max-width:576px) {
+        .offers .row {
+            flex-direction: column;
+        }
+    }
+    /* end offers  */
+    /* start products */
+    
+    .products-info,
+    .arrivals-info {
+        box-shadow: 5px 5px 10px var(--lightblue);
+    }
+    
+    .products-info,
+    .products-info img {
+        border-radius: 10px;
+    }
+    
+    .products-info img {
+        width: 100%;
+    }
+    
+    .products-info i {
+        color: var(--orange);
+    }
+    
+    .products-cart {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--lightgreen);
+    }
+    
+    .products-cart i {
+        color: var(--zitony);
+    }
+    /* end products */
+    /* start accessories */
+    
+    .accessories {
+        background: url(../images/b2.jpg) center/cover;
+    }
+    /* end accessories */
+    /* start arrivals */
+    
+    .arrivals-info,
+    .arrivals-info img {
+        border-radius: 10px;
+    }
+    
+    .arrivals-info img {
+        width: 100%;
+    }
+    
+    .arrivals-info i {
+        color: var(--orange);
+    }
+    
+    .arrivals-cart {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--lightgreen);
+    }
+    
+    .arrivals-cart i {
+        color: var(--zitony);
+    }
+    /* end arrivals */
+    /* start seasons */
+    
+    .seasons .seasons-content {
+        height: 450px;
+    }
+    
+    .seasons .btn {
+        border-radius: 0;
+    }
+    
+    .seasons .btn-outline-light:hover {
+        color: #000;
+        background-color: transparent;
+    }
+    
+    .seasons img {
+        width: 100%;
+        height: 100%;
+    }
+    /* end seasons */
+    /* start signup */
+    
+    .signup {
+        background-image: url(../images/b1.jpg);
+        background-size: cover;
+    }
+    
+    input {
+        width: 330px;
+        padding: 0.7rem 0.75rem;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        background-color: white;
+    }
+    
+    .signup .btn {
+        border-radius: 0 5px 5px 0;
+        padding: 0.8rem 2rem;
+    }
+    
+    @media (max-width:992px) {
+        .signup-content {
+            text-align: center;
+            flex-direction: column;
+            transform: translateY(15%);
+        }
+    }
+    
+    @media (max-width:576px) {
+        .signup-input input {
+            width: 230px;
+            padding: 8px 0px 8px 5px;
+        }
+        .signup-input .btn {
+            padding: 8px 5px;
+        }
+    }
+    /* end signup */
+    /* start care */
+    
+    .care {
+        font-size: 14px;
+    }
+    
+    .app .app-border {
+        border: 1px solid var(--zitony);
+        border-radius: 4px;
+    }
+    /* end care */
