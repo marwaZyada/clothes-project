@@ -26,13 +26,13 @@
     
     .menue {
         position: absolute;
-        right: -75px;
-        top: 45px;
+        right: 0;
+        top: 65px;
         display: flex;
         flex-direction: column;
-        height: 50vh;
-        width: 150px;
-        align-items: flex-end;
+        height: calc(100vh - 65px);
+        width: 280px;
+        align-items: flex-start;
         padding: 20px;
         background-color: var(--zitony);
         visibility: hidden;
@@ -40,15 +40,10 @@
         transition: all .8s;
     }
     
-    .menue a {
-        color: var(--black);
-    }
-    
-    .menue span {
+    .menue #menue-close {
         position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--black);
+        right: 5px;
+        top: 5px;
         cursor: pointer;
     }
     
@@ -63,7 +58,7 @@
             width: 0;
         }
         to {
-            width: 150px;
+            width: 220px;
         }
     }
     
@@ -227,9 +222,6 @@
             margin-right: 22px;
             margin-left: 10px;
         }
-        .menue {
-            right: -45px;
-        }
     }
     /* end deals */
     /* start offers  */
@@ -315,6 +307,7 @@
     
     .products-cart i {
         color: var(--zitony);
+        cursor: pointer;
     }
     /* end products */
     /* start accessories */
@@ -416,5 +409,12 @@
     .app .app-border {
         border: 1px solid var(--zitony);
         border-radius: 4px;
+    }
+    
+    @media (max-width:576px) {
+        .care-content>div {
+            text-align: center;
+            width: 100%;
+        }
     }
     /* end care */
