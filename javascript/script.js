@@ -99,7 +99,8 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         decrease.onclick = (e) => {
             if (i == 1) {
                 newDiv.remove();
-
+                total.innerHTML = '0';
+                totalPrice.innerHTML = '0.00';
             } else {
                 count.innerHTML = parseInt(i) - 1;
                 total.innerHTML = parseInt(i) - 1;
