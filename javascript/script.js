@@ -70,9 +70,42 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         let newcontent2 = document.createTextNode(price)
         newheader2.appendChild(newcontent2)
         newDiv.appendChild(newheader2)
+        let decrease = document.createElement('i');
+        decrease.setAttribute('class', 'fa-solid fa-minus')
+        newDiv.appendChild(decrease)
+        let count = document.createElement("span")
+        let i = 1
+        countContent = document.createTextNode(i)
+        count.appendChild(countContent)
+        newDiv.appendChild(count)
+        let increament = document.createElement('i');
+        increament.setAttribute('class', 'fa-solid fa-plus')
+        newDiv.appendChild(increament)
+
 
         newi.onclick = () => {
             newDiv.remove()
+        }
+
+        let total = document.getElementById("num-product");
+        total.innerHTML = i
+        let totalPrice = document.getElementById("total-price")
+        increament.onclick = () => {
+            count.innerHTML = parseInt(i) + 1;
+            total.innerHTML = parseInt(i) + 1;
+            totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
+            return i++
+        }
+        decrease.onclick = (e) => {
+            if (i == 1) {
+                newDiv.remove();
+
+            } else {
+                count.innerHTML = parseInt(i) - 1;
+                total.innerHTML = parseInt(i) - 1;
+                totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
+                return i--
+            }
         }
 
         //         let cartona = `  <div id="" class="pro-info d-flex justify-content-between align-items-center w-100 mt-5">
@@ -81,9 +114,12 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         // <h4>${name}</h4>
         // <h4>${price}</h4>
         //   </div>`
-
+        { /* <i class="fa-solid fa-plus"></i> */ } { /* <i class="fa-solid fa-circle-minus"></i> */ }
         // menu.innerHTML += cartona;
         menu.appendChild(newDiv)
+
+        totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
+
 
 
     }))
