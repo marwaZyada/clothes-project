@@ -114,7 +114,7 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
                 // totalPrice.innerHTML = '0.00';
                 lockSpan.innerHTML = parseInt(lockSpan.innerHTML) - 1;
                 y--
-                totalPrice.innerHTML = (eval(parseFloat(totalPrice.innerHTML) - parseFloat(newheader2.innerHTML)))
+                totalPrice.innerHTML = eval(parseFloat(newheader2.innerHTML) * parseInt(lockSpan.innerHTML));
                 totalPrice.innerHTML = (totalPrice.innerHTML).slice(0, 5)
 
 
