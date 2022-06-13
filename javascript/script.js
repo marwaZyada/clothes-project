@@ -45,9 +45,12 @@ lightMode.onclick = () => {
     document.body.classList.remove('darkWindow');
 }
 
+
+
+
+
+
 if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
-
-
 
     cart.forEach((el) => el.addEventListener('click', (att) => {
         let imgsrc = att.target.dataset.src;
@@ -94,29 +97,27 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
 
 
         let total = document.getElementById("num-product");
-        // total.innerHTML = i
+
 
 
         let totalPrice = document.getElementById("total-price")
         increament.onclick = () => {
             count.innerHTML = parseInt(i) + 1;
             total.innerHTML = parseInt(i) + 1;
-
-
-
             totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
             return i++
         }
+
+
         decrease.onclick = (e) => {
             if (i == 1) {
                 newDiv.remove();
                 total.innerHTML = parseInt(lockSpan.innerHTML) - 1;
-                // totalPrice.innerHTML = '0.00';
+
                 lockSpan.innerHTML = parseInt(lockSpan.innerHTML) - 1;
                 y--
                 totalPrice.innerHTML = eval(parseFloat(newheader2.innerHTML) * parseInt(lockSpan.innerHTML));
-                totalPrice.innerHTML = (totalPrice.innerHTML).slice(0, 5)
-
+                totalPrice.innerHTML = ((totalPrice.innerHTML) === '0' ? '0.00' : (totalPrice.innerHTML).slice(0, 5))
 
 
 
@@ -124,14 +125,13 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
                 count.innerHTML = parseInt(i) - 1;
                 total.innerHTML = parseInt(i) - 1;
 
-
-                // beforeLock.content = parseInt(i) - 1;
-
-
                 totalPrice.innerHTML = (eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML))))
                 return i--
             }
         }
+
+
+
 
         newi.onclick = () => {
             newDiv.remove();
@@ -139,9 +139,9 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
             // totalPrice.innerHTML = '0.00';
             lockSpan.innerHTML = parseInt(lockSpan.innerHTML) - 1;
             y--
-            total.innerHTML = parseInt(total.innerHTML) - 1;
-            totalPrice.innerHTML = (eval(parseFloat(totalPrice.innerHTML) - parseFloat(newheader2.innerHTML)))
-            totalPrice.innerHTML = (totalPrice.innerHTML).slice(0, 5)
+            total.innerHTML = parseInt(lockSpan.innerHTML);
+            totalPrice.innerHTML = (eval(parseFloat(newheader2.innerHTML) * parseInt(lockSpan.innerHTML)))
+            totalPrice.innerHTML = ((totalPrice.innerHTML) === '0' ? '0.00' : (totalPrice.innerHTML).slice(0, 5))
 
 
         }
