@@ -8,9 +8,10 @@ var divMode = document.getElementById("div-mode");
 var lightMode = document.getElementById("light-mode");
 var image1 = document.getElementById("img-bg");
 let cart = document.querySelectorAll(".products-cart .fa-cart-shopping");
+let lockSpan = document.querySelector(".lock span")
+let y = 1;
 
-
-
+let cartAdd = 0;
 
 displayLock.onclick = () => {
     menu.classList.add("show");
@@ -52,6 +53,7 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         let name = att.target.dataset.name;
         let price = att.target.dataset.price;
 
+
         let newDiv = document.createElement('div');
         newDiv.setAttribute('class', 'pro-info d-flex justify-content-between align-items-center w-100 mt-5')
         let newi = document.createElement('i');
@@ -80,19 +82,27 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         newDiv.appendChild(count)
         let increament = document.createElement('i');
         increament.setAttribute('class', 'fa-solid fa-plus')
-        newDiv.appendChild(increament)
+        newDiv.appendChild(increament);
+        newDiv.setAttribute('data-count', i)
 
 
-        newi.onclick = () => {
-            newDiv.remove()
-        }
+
+
+
+
+
 
         let total = document.getElementById("num-product");
         total.innerHTML = i
+
+
         let totalPrice = document.getElementById("total-price")
         increament.onclick = () => {
             count.innerHTML = parseInt(i) + 1;
             total.innerHTML = parseInt(i) + 1;
+
+
+
             totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
             return i++
         }
@@ -101,12 +111,27 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
                 newDiv.remove();
                 total.innerHTML = '0';
                 totalPrice.innerHTML = '0.00';
+
+
             } else {
                 count.innerHTML = parseInt(i) - 1;
                 total.innerHTML = parseInt(i) - 1;
+
+
+                // beforeLock.content = parseInt(i) - 1;
+
+
                 totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
                 return i--
             }
+        }
+
+        newi.onclick = () => {
+            newDiv.remove();
+            total.innerHTML = '0';
+            totalPrice.innerHTML = '0.00';
+            lockSpan.innerHTML = parseInt(lockSpan.innerHTML) - 1;
+
         }
 
         //         let cartona = `  <div id="" class="pro-info d-flex justify-content-between align-items-center w-100 mt-5">
@@ -117,16 +142,26 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         //   </div>`
         { /* <i class="fa-solid fa-plus"></i> */ } { /* <i class="fa-solid fa-circle-minus"></i> */ }
         // menu.innerHTML += cartona;
-        menu.appendChild(newDiv)
-
         totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
+
+        menu.appendChild(newDiv)
+        lockSpan.innerHTML = y
+        y++
+
+        return y
+
+
+
+
 
 
 
     }))
 }
+console.log(cartAdd)
+
 close.onclick = () => {
 
 
     menu.classList.remove("show");
-};
+}
