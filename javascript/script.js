@@ -10,6 +10,7 @@ var image1 = document.getElementById("img-bg");
 let cart = document.querySelectorAll(".products-cart .fa-cart-shopping");
 let lockSpan = document.querySelector(".lock span")
 let y = 1;
+let calculation = 0
 
 let cartAdd = 0;
 
@@ -93,7 +94,7 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
 
 
         let total = document.getElementById("num-product");
-        total.innerHTML = i
+        // total.innerHTML = i
 
 
         let totalPrice = document.getElementById("total-price")
@@ -109,8 +110,14 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         decrease.onclick = (e) => {
             if (i == 1) {
                 newDiv.remove();
-                total.innerHTML = '0';
-                totalPrice.innerHTML = '0.00';
+                total.innerHTML = parseInt(lockSpan.innerHTML) - 1;
+                // totalPrice.innerHTML = '0.00';
+                lockSpan.innerHTML = parseInt(lockSpan.innerHTML) - 1;
+                y--
+                totalPrice.innerHTML = (eval(parseFloat(totalPrice.innerHTML) - parseFloat(newheader2.innerHTML)))
+                totalPrice.innerHTML = (totalPrice.innerHTML).slice(0, 5)
+
+
 
 
             } else {
@@ -121,16 +128,21 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
                 // beforeLock.content = parseInt(i) - 1;
 
 
-                totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
+                totalPrice.innerHTML = (eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML))))
                 return i--
             }
         }
 
         newi.onclick = () => {
             newDiv.remove();
-            total.innerHTML = '0';
-            totalPrice.innerHTML = '0.00';
+            // total.innerHTML = '0';
+            // totalPrice.innerHTML = '0.00';
             lockSpan.innerHTML = parseInt(lockSpan.innerHTML) - 1;
+            y--
+            total.innerHTML = parseInt(total.innerHTML) - 1;
+            totalPrice.innerHTML = (eval(parseFloat(totalPrice.innerHTML) - parseFloat(newheader2.innerHTML)))
+            totalPrice.innerHTML = (totalPrice.innerHTML).slice(0, 5)
+
 
         }
 
@@ -142,13 +154,18 @@ if (!(menu.classList.contains("show")) || (menu.classList.contains("show"))) {
         //   </div>`
         { /* <i class="fa-solid fa-plus"></i> */ } { /* <i class="fa-solid fa-circle-minus"></i> */ }
         // menu.innerHTML += cartona;
-        totalPrice.innerHTML = eval((parseFloat(newheader2.innerHTML)) * (parseInt(count.innerHTML)))
 
-        menu.appendChild(newDiv)
+
+
+        menu.appendChild(newDiv);
+        total.innerHTML = y;
+        calculation = eval((parseFloat(newheader2.innerHTML)) + (parseFloat(totalPrice.innerHTML)))
+        totalPrice.innerHTML = calculation
+
         lockSpan.innerHTML = y
         y++
 
-        return y
+        return y, calculation
 
 
 
